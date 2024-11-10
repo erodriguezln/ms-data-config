@@ -20,11 +20,11 @@ spring:
         - id: calculate-service
           uri: lb://calculate-service
           predicates:
-            - Path=/calculate/**
+            - Path=/api/v1/calculate**
         - id: attendance-service
           uri: lb://attendance-service
           predicates:
-            - Path=/attendance/**
+            - Path=/api/v1/attendance/**
         - id: employee-service
           uri: lb://employee-service
           predicates:
