@@ -29,6 +29,10 @@ spring:
           uri: lb://employee-service
           predicates:
             - Path=/api/v1/employees/**
+        - id: justify-service
+          uri: lb://justify-service
+          predicates:
+            - Path=/api/v1/justify/**
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
