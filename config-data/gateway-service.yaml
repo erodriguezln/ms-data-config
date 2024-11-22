@@ -33,6 +33,10 @@ spring:
           uri: lb://justify-service
           predicates:
             - Path=/api/v1/justify/**
+		- id: extrahour-service
+		  uri: lb://extrahour-service
+		  predicates:
+		    - Path=/api/v1/extrahour/**
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
