@@ -33,7 +33,7 @@ spring:
           uri: lb://justify-service
           predicates:
             - Path=/api/v1/justify/**
-		- id: extrahour-service
+        - id: extrahour-service
 		  uri: lb://extrahour-service
 		  predicates:
 		    - Path=/api/v1/extrahour/**
