@@ -1,20 +1,28 @@
 server:
   port: 8080
-  # port: 9500 # puede ser por el puerto
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      # default-zone: http://localhost:8761/eureka
-      # defaultZone: http://localhost:8761/eureka
-      defaultZone: http://eureka-service:8761/eureka # o defaultZone
+      defaultZone: http://eureka-service:8761/eureka
   instance:
-    hostname: localhost # deberia eliminar?
+    hostname: localhost
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: '*'
       discovery:
         locator:
           enabled: true
@@ -43,8 +51,3 @@ spring:
           uri: lb://frontend-service
           predicates:
             - Path=/frontend/**
-# logging:
-#   level:
-#     org.springframework.cloud.gateway: DEBUG
-#     reactor.netty: DEBUG
-#     root: DEBUG
