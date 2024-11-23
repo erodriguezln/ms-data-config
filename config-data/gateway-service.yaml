@@ -38,8 +38,8 @@ spring:
           uri: lb://extrahour-service
           predicates:
             - Path=/api/v1/extrahour/**
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty: DEBUG
-    root: DEBUG
+# logging:
+#   level:
+#     org.springframework.cloud.gateway: DEBUG
+#     reactor.netty: DEBUG
+#     root: DEBUG
