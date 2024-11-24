@@ -39,10 +39,10 @@ spring:
           uri: lb://extrahour-service
           predicates:
             - Path=/api/v1/extrahour/**
-        # - id: frontend-service
-        #   uri: lb://frontend-service
-        #   predicates:
-        #     - Path=/frontend/**
+        - id: frontend-service
+          uri: lb://frontend-service
+          predicates:
+            - Path=/frontend/**
 # logging:
 #   level:
 #     org.springframework.cloud.gateway: DEBUG
