@@ -40,7 +40,7 @@ spring:
           predicates:
             - Path=/api/v1/extrahour/**
         - id: frontend-service
-          uri: lb://frontend-service
+          uri: http://frontend-service
           predicates:
             - Path=/**
             # - Path=/frontend/**
