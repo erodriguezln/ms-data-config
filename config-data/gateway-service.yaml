@@ -10,7 +10,7 @@ eureka:
       # defaultZone: http://localhost:8761/eureka
       defaultZone: http://eureka-service:8761/eureka # o defaultZone
   instance:
-    hostname: localhost # deberia eliminar?
+    # hostname: localhost # deberia eliminar?
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 spring:
   cloud:
@@ -42,7 +42,8 @@ spring:
         - id: frontend-service
           uri: lb://frontend-service
           predicates:
-            - Path=/frontend/**
+            - Path=/**
+            # - Path=/frontend/**
 # logging:
 #   level:
 #     org.springframework.cloud.gateway: DEBUG
