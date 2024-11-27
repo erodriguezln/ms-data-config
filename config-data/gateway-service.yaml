@@ -1,13 +1,13 @@
 server:
-  port: 8080
+  # port: 8080
+  port: 9000
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://eureka-service:8761/eureka # o defaultZone
+      defaultZone: http://eureka-service:8761/eureka
   instance:
-    # hostname: localhost # deberia eliminar?
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 spring:
   cloud:
