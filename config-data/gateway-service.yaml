@@ -31,32 +31,32 @@ spring:
           uri: lb://calculate-service
           predicates:
             - Path=/api/v1/calculate/**
-        - id: attendance-service
-          uri: lb://attendance-service
-          predicates:
-            - Path=/api/v1/attendance/**
-        - id: employee-service
-          uri: lb://employee-service
-          predicates:
-            - Path=/api/v1/employees/**
-        - id: justify-service
-          uri: lb://justify-service
-          predicates:
-            - Path=/api/v1/justify/**
-        - id: extrahour-service
-          uri: lb://extrahour-service
-          predicates:
-            - Path=/api/v1/extrahour/**
+        # - id: attendance-service
+        #   uri: lb://attendance-service
+        #   predicates:
+        #     - Path=/api/v1/attendance/**
+        # - id: employee-service
+        #   uri: lb://employee-service
+        #   predicates:
+        #     - Path=/api/v1/employees/**
+        # - id: justify-service
+        #   uri: lb://justify-service
+        #   predicates:
+        #     - Path=/api/v1/justify/**
+        # - id: extrahour-service
+        #   uri: lb://extrahour-service
+        #   predicates:
+        #     - Path=/api/v1/extrahour/**
         - id: showpaycheck-service
           uri: lb://showpaycheck-service
           predicates:
             - Path=/api/v1/showpaycheck/**
-        - id: frontend-service
-          uri: http://frontend-service
-          predicates:
-            - Path=/**
-# logging:
-#   level:
-#     org.springframework.cloud.gateway: DEBUG
-#     reactor.netty: DEBUG
-#     root: DEBUG
+        # - id: frontend-service
+        #   uri: http://frontend-service
+        #   predicates:
+        #     - Path=/**
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty: DEBUG
+    root: DEBUG
