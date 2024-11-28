@@ -47,6 +47,10 @@ spring:
           uri: lb://extrahour-service
           predicates:
             - Path=/api/v1/extrahour/**
+        - id: showpaycheck-service
+          uri: lb://showpaycheck-service
+          predicates:
+            - Path=/api/v1/showpaycheck/**
         - id: frontend-service
           uri: http://frontend-service
           predicates:
