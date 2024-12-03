@@ -55,8 +55,8 @@ spring:
           uri: http://frontend-service
           predicates:
             - Path=/**
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty: DEBUG
-    root: DEBUG
+# logging:
+#   level:
+#     org.springframework.cloud.gateway: DEBUG
+#     reactor.netty: DEBUG
+#     root: DEBUG
